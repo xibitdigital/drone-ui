@@ -12,7 +12,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: 'static/app-[hash].js',
+    filename: 'static/app.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
@@ -36,7 +36,7 @@ module.exports = {
       },
       {
         test: /\/(fonts|iconfont)\/(.*)\.(eot|svg|ttf|woff2?)(\?.*)?$/,
-        loader: 'file?name=static/[name]-[hash].[ext]'
+        loader: 'file?name=static/[name].[ext]'
       },
       {
         test: /index\.html$/,
@@ -55,7 +55,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   plugins: [
-    new ExtractTextPlugin('static/app-[hash].css'),
+    new ExtractTextPlugin('static/app.css'),
     new CopyWebpackPlugin([
         { from: 'images', to: 'static' }
     ]),
