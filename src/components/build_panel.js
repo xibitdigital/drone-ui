@@ -13,7 +13,7 @@ class BuildPanel extends React.Component {
       return (
         <div>
           <em>Parent:</em> #{parent}
-          <a href={`../${parent}`} className="parent-link">
+          <a href={`${parent}`} className="parent-link">
             <i className="material-icons">insert_link</i>
           </a>
         </div>
